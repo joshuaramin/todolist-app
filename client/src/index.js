@@ -6,7 +6,7 @@ import reportWebVitals from "./reportWebVitals";
 import { ApolloProvider, ApolloClient, InMemoryCache } from "@apollo/client";
 require("dotenv");
 const apollo = new ApolloClient({
-  uri: "http://localhost:4000/graphql",
+  uri: process.env.API_URL,
   credentials: "same-origin",
   cache: new InMemoryCache(),
 });
