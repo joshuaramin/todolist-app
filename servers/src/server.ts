@@ -1,9 +1,8 @@
 import { makeSchema, declarativeWrappingPlugin } from "nexus";
 import { ApolloServer } from "apollo-server-express";
 import express from "express";
-import cors from "cors";
-
-//file imports
+require("dotenv");
+//file importsodotenv
 import * as todo from "./api/todo";
 import { join } from "path";
 const schema = makeSchema({
@@ -23,7 +22,8 @@ async function startApollo() {
   server.applyMiddleware({
     app,
     cors: {
-      origin: "http://localhost:3000",
+      credentials: true,
+      origin: "*",
     },
   });
   console.log(`http://localhost:4000${server.graphqlPath}`);
