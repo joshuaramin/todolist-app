@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+        "strict": true,
+        "pretty": true,
+        "lib": [
+            "ESNext"
+        ],
+        "esModuleInterop": true,
+        "importHelpers": true,
+        "allowJs": false,
+        "rootDir": "src",
+        "emitBOM": true,
+        "moduleResolution": "Node",
+        "noImplicitAny": true,
+        "target": "ESNext",
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}
